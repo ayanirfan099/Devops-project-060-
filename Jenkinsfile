@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/ayanirfan099/Devops-project-060-.git'
+                git branch: 'main', url: 'https://github.com/ayanirfan099/Devops-project-060-.git'
             }
         }
 
@@ -25,7 +25,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying to Azure VM...'
-                // Example: Copy files to /var/www/html
                 sh '''
                 cp -r * /var/www/html/
                 '''
