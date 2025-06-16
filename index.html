@@ -10,6 +10,10 @@
     <p>This page was deployed automatically from GitHub via Jenkins on an Azure VM.</p>
     <button onclick="showMessage()">Click Me</button>
     <p id="message"></p>
-    <script src="script.js"></script>
+    <script>
+        function showMessage() {
+    document.getElementById("message").textContent = "👋 AssalamoAlaikum SIR BABAR SHEHZAD! our CI/CD pipeline works perfectly fine , SIR BABAR ZINDABAD!";
+}
+    </script>
 </body>
 </html>
